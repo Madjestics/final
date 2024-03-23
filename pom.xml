@@ -10,11 +10,11 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>olimp</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>olimp</name>
 	<description>olimp</description>
+	<packaging>jar</packaging>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
