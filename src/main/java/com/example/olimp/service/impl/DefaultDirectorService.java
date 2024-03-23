@@ -73,6 +73,9 @@ public class DefaultDirectorService implements DirectorService{
         if (existedDirector == null) {
             throw new EntityNotFoundException(String.format("Директор с id %d не найден", id));
         }
+        if (directorRepository.findMoviesByDirectorId(id).size()>0) {
+            throw new InternalServerException("Невозможно удалить директора, так как он привзяан к существующим фильмам");
+        }
         try {
             directorRepository.deleteById(id);
         }
